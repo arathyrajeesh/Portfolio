@@ -490,7 +490,7 @@
 
 .footer .back-top {
   display: block;
-  font-size: 0.8rem;
+  font-size:18px;
   color: #ccc;
   margin-bottom: 20px;
   text-decoration: none;
@@ -506,7 +506,7 @@
 
 .footer-icons a {
   color: #ccc;
-  font-size: 1rem;
+  font-size: 20px;
   transition: color 0.3s;
 }
 
@@ -515,6 +515,6 @@
 }
 
 .footer p {
-  font-size: 0.75rem;
+  font-size: 18px;
   text-align: center;
 }
