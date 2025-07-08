@@ -207,6 +207,10 @@
   margin-top: 50px;
 }
 
+.service-box {
+  position: relative;
+}
+
 .service-box::before {
   content: "";
   position: absolute;
@@ -233,7 +237,6 @@
 .maintenance-box::before {
   background-image: url("assets/about1.png");
 }
-
 
 .service-box * {
   position: relative;
@@ -298,6 +301,13 @@
   margin: 0;
 }
 
+.portfolio-section {
+  background-color: #1b1b1b;
+  color: #fff;
+  padding: 60px 20px 20px;
+  text-align: center;
+}
+
 .portfolio-header {
   background-image: url("assets/section-header.png");
   background-size: cover;
@@ -305,11 +315,44 @@
   height: 300px;
   position: relative;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
   color: #fff;
 }
+
+.portfolio-header h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  border: 2px solid #020202;
+  padding: 10px 30px;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.portfolio-filters {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.portfolio-filters button {
+  background: none;
+  color: #fff;
+  border: none;
+  font-size: 0.95rem;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.portfolio-filters .active,
+.portfolio-filters button:hover {
+  border-bottom: 2px solid #080808;
+}
+
 
 .overlay-content {
   background-color: rgba(0, 0, 0, 0.5);
@@ -317,31 +360,25 @@
   width: 100%;
 }
 
-.portfolio-header h2 {
-  font-size: 48px;
-  font-weight: bold;
-  border: 3px solid #fff;
-  display: inline-block;
-  padding: 10px 30px;
-  margin-bottom: 20px;
+.portfolio-filters button::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #080808;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease;
 }
 
-.portfolio-filters {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 10px;
+.portfolio-filters button:hover::after,
+.portfolio-filters button.active::after {
+  width: 100%;
 }
 
-.portfolio-filters button {
-  background: transparent;
-  color: #fff;
-  border: none;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  padding: 8px 12px;
-  cursor: pointer;
-  transition: color 0.3s;
+.portfolio-filters button:hover {
+  color: #ccc;
+  border-bottom: 2px solid #ccc;
 }
 
 .portfolio-filters .active {
@@ -355,6 +392,7 @@
   max-width: 1000px;
   margin: 60px auto;
   padding: 0 20px;
+  background-color: #1b1b1b;
 }
 
 .portfolio-item {
@@ -392,6 +430,14 @@
 
 .portfolio-item:hover .overlay {
   opacity: 1;
+}
+
+.portfolio-end-message {
+  background-color: #1b1b1b;
+  text-align: center;
+  color: #fff;
+  font-size:25px;
+  padding: 20px 60px;
 }
 
 .overlay h3 {
@@ -481,6 +527,7 @@
   cursor: pointer;
 }
 
+/* FOOTER */
 .footer {
   background: #111;
   color: #ccc;
@@ -490,7 +537,7 @@
 
 .footer .back-top {
   display: block;
-  font-size:18px;
+  font-size: 18px;
   color: #ccc;
   margin-bottom: 20px;
   text-decoration: none;
